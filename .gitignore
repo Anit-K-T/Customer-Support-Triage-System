@@ -1,11 +1,14 @@
-# Python virtual environments
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
 customer/
 .venv/
 venv/
 
-# Python cache
-__pycache__/
-*.py[cod]
-
 # Environment variables
 .env
+
+# IDE
+.vscode/

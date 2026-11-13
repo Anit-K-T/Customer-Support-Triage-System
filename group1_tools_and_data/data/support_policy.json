@@ -1,0 +1,18 @@
+{
+  "version": "v1",
+  "return_window_days": 30,
+  "escalation_keywords": [
+    "charged twice",
+    "duplicate payment",
+    "someone accessed",
+    "fraud",
+    "unauthorized"
+  ],
+  "rules": {
+    "billing": "Never confirm refund or charge reversal without transaction verification.",
+    "delivery": "Delivered-but-not-received cases require delivery investigation.",
+    "returns": "Return eligibility is within 30 days of confirmed delivery; exceptions require manual approval.",
+    "account": "Suspected account takeover is HIGH urgency and must be escalated."
+  },
+  "response_policy": "Draft responses only; no refunds, emails, or account modifications."
+}
