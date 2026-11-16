@@ -1,5 +1,5 @@
 
-from support_tools import load_all, evaluate_escalation
+from group1_tools_and_data.support_tools import load_all, evaluate_escalation
 
 # Load ticket, order and policy data
 store = load_all()
@@ -11,9 +11,9 @@ ticket = store.get_ticket("T001")
 decision = evaluate_escalation(store, ticket)
 
 # Display result
-print("Ticket ID:", ticket["ticket_id"])
-print("Escalation:", decision["escalate"])
-print("Urgency:", decision["urgency"])
-print("Status:", decision["suggested_status"])
-print("Evidence:", decision["evidence_order_ids"])
-print("Policy references:", decision["policy_references"])
+print("Ticket ID:", ticket.ticket_id)
+print("Escalation:", decision.escalate)
+print("Urgency:", decision.urgency)
+print("Status:", decision.suggested_status)
+print("Evidence:", decision.evidence_order_ids)
+print("Policy references:", decision.policy_references)
