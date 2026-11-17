@@ -30,6 +30,13 @@ class ClassificationResult(BaseModel):
     urgency: Urgency
     summary: str
     status: TicketStatus | None = None
+
+class ResolutionDraft(BaseModel):
+    summary: str = Field(min_length=1)
+    evidence_order_ids: list[str]
+    policy_references: list[str]
+    suggested_reply: str = Field(min_length=1)
+
 # Incoming ticket structure
 class TicketInput(BaseModel):
     ticket_id: str
