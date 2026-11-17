@@ -159,6 +159,15 @@ def general_branch(result):
         "department": "General Support Team",
         "summary": result.summary
     }
+
+def account_branch(result):
+    return {
+        "category": result.category.value,
+        "department": "Account Support Team",
+        "summary": result.summary
+    }
+
+
 # Step 8: Create conditional routing
 
 category_router = RunnableBranch(
@@ -173,6 +182,10 @@ category_router = RunnableBranch(
     (
         lambda result: result.category == Category.RETURN,
         RunnableLambda(return_branch)
+    ),
+    (
+        lambda result: result.category == Category.ACCOUNT,
+        RunnableLambda(account_branch)
     ),
     RunnableLambda(general_branch)
 )

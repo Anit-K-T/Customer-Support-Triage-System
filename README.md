@@ -184,6 +184,10 @@ Replace `T001` with the required ticket ID.
 ```bash
 python -m app.main --all
 ```
+### Run the Streamlit UI
+
+```powershell
+streamlit run streamlit_app.py
 
 The application processes the available tickets and displays structured JSON results and status counts.
 
